@@ -1,13 +1,13 @@
 
 @echo off
-title X Spaces to MP3 Downloader (128kbps)
+title X Spaces to MP3 Downloader (128kbps - With Progress)
 echo -----------------------------------------
 echo Paste your Twitter/X Space link below:
 set /p link=
 
 echo.
 echo Downloading and converting to 128kbps MP3...
-yt-dlp.exe -x --audio-format mp3 --audio-quality 0 --ffmpeg-location . %link%
+yt-dlp.exe --progress -x --audio-format mp3 --audio-quality 0 --ffmpeg-location . %link%
 
 echo.
 echo Done! Your 128kbps MP3 file is saved in this folder.
